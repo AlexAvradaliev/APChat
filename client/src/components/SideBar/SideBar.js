@@ -1,7 +1,9 @@
-import { Nav_Buttons } from './assets/data';
-import styles from './SideBar.module.css';
-import logo from './assets/images/logo.png';
 import { useState } from 'react';
+
+import { Nav_Buttons } from './assets/data';
+import logo from './assets/images/logo.png';
+
+import styles from './SideBar.module.css';
 
 const SideBar = () => {
     const [active, setActive] = useState(0);
@@ -31,12 +33,18 @@ const SideBar = () => {
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <label className={styles.switch}>
-                            <input type='checkbox' defaultChecked/>
+                            <input type='checkbox' defaultChecked />
                             <span className={styles.slider}></span>
                         </label>
                     </li>
                     <li className={styles.item}>
-                        <img src={'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'} alt='logo' className={styles.avatar}/>
+                        <img
+                            src={
+                                'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+                            }
+                            alt='logo'
+                            className={styles.avatar}
+                        />
                     </li>
                 </ul>
             </nav>

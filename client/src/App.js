@@ -1,9 +1,9 @@
-import SideBar from './components/SideBar/SideBar';
+import Router from './routes';
 import './generalCss/App.css';
 
 function App() {
   return (
-    <><SideBar /></>
+    <Router />
   );
 }
 
