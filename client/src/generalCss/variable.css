@@ -1,0 +1,70 @@
+:root {
+     /*========== Colors ==========*/
+    --clr-bg-primary: #f0f4fa;
+    --clr-bg-secondary: #f8faff;
+    --clr-primary: #0162c4;
+    --clr-white: #fff;
+    --clr-divider: #dae0e7;
+    --clr-divider-text: #dae0e7;
+    --clr-text: #080707;
+    --clr-bg-hover: rgba(99, 115, 129, 0.08);
+    --clr-icons: #637381;
+    --clr-checkTheme: #0162c4;
+
+    /*========== Colors ==========*/
+    --shadow-primary: 0px 0px 2px rgb(0 0 0 / 25%);
+
+    /*==========Typography ==========*/
+    --biggest-font-size: 1.25rem; 
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 600;
+    --font-semibold: 700;
+
+}
+
+
+/*========== Body theme ==========*/
+body.blue {
+    --clr-primary: #0162c4;
+    --clr-checkTheme: #0162c4;
+}
+
+body.violet {
+    --clr-primary: #7635dc;
+    --clr-checkTheme: #7635dc;
+}
+
+body.skyBlue {
+    --clr-primary: #1ccaff;
+    --clr-checkTheme: #1ccaff;
+}
+
+body.green {
+    --clr-primary: #00FF00;
+    --clr-checkTheme: #00FF00;
+}
+
+body.orange {
+    --clr-primary: #fda92d;
+    --clr-checkTheme: #fda92d;
+}
+
+body.orange {
+    --clr-primary: #ff3030;
+    --clr-checkTheme: #ff3030;
+}
+
+body.dark {
+    --clr-bg-primary: #212b36;
+    --clr-bg-secondary: #161c24;
+    --clr-text: #fff;
+    --clr-icons: #919EAB;
+    --clr-divider: rgba(145, 158, 171, 0.24);
+    --clr-divider-text: #fff;
+    --clr-checkTheme: #6e757c;
+}
+
