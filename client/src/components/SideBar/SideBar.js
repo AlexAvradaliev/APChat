@@ -1,0 +1,47 @@
+import { Nav_Buttons } from './assets/data';
+import styles from './SideBar.module.css';
+import logo from './assets/images/logo.png';
+import { useState } from 'react';
+
+const SideBar = () => {
+    const [active, setActive] = useState(0);
+
+    return (
+        <section className={styles.sideBar}>
+            <div className={styles.logo}>
+                <img src={logo} alt='AP chat logo' />
+            </div>
+            <nav className={styles.nav}>
+                <ul className={styles.list}>
+                    {Nav_Buttons.map((el) =>
+                        el.index !== 3 ? (
+                            <li
+                                className={`${styles.item} ${el.index === active && styles.active}`}
+                                key={el.index}
+                                onClick={() => setActive(el.index)}>
+                                {el.icon}
+                            </li>
+                        ) : (
+                            <li className={styles.item} key={el.index}>
+                                {el.icon}
+                            </li>
+                        ),
+                    )}
+                </ul>
+                <ul className={styles.list}>
+                    <li className={styles.item}>
+                        <label className={styles.switch}>
+                            <input type='checkbox' defaultChecked/>
+                            <span className={styles.slider}></span>
+                        </label>
+                    </li>
+                    <li className={styles.item}>
+                        <img src={'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'} alt='logo' className={styles.avatar}/>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    );
+};
+
+export default SideBar;
