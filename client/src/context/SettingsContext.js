@@ -22,7 +22,7 @@ export const SettingsProvider = ({ children }) => {
             ...settings,
             themeMode: settings.themeMode === 'light' ? 'dark' : 'light',
         });
-        if (settings.themeMode === 'light') {
+        if (settings.themeMode === 'light' || settings.themeMode === '') {
             document.body.classList.add('dark');
             document.body.classList.remove('light');
         } else {
