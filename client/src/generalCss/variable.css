@@ -10,6 +10,8 @@
     --clr-bg-hover: rgba(99, 115, 129, 0.08);
     --clr-icons: #637381;
     --clr-checkTheme: #0162c4;
+    --clr-badge: #fff;
+    --clr-scroll: #808793;
 
     /*========== Colors ==========*/
     --shadow-primary: 0px 0px 2px rgb(0 0 0 / 25%);
@@ -56,11 +58,12 @@ body.orange {
     --clr-checkTheme: #ff3030;
 }
 
-body.dark {
+[data-theme='dark'] {
     --clr-bg-primary: #212b36;
     --clr-bg-secondary: #161c24;
     --clr-text: #fff;
-    --clr-icons: #919eab;
+    --clr-icons: #fff;
     --clr-divider: rgba(145, 158, 171, 0.24);
     --clr-divider-text: #fff;
+    --clr-badge: #212b36;
 }

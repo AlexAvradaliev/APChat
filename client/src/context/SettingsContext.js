@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useEffect } from 'react';
 
 import useLocalStorage from '../hooks/useLocalStorage';
 
@@ -17,25 +17,18 @@ export const SettingsProvider = ({ children }) => {
         themeMode: initialState.themeMode,
     });
 
+    const theme = settings.themeMode;
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+    },[theme])
+
     const onToggleMode = () => {
         setSettings({
             ...settings,
             themeMode: settings.themeMode === 'light' ? 'dark' : 'light',
         });
-        if (settings.themeMode === 'light' || settings.themeMode === '') {
-            document.body.classList.add('dark');
-            document.body.classList.remove('light');
-        } else {
-            document.body.classList.add('light');
-            document.body.classList.remove('dark');
-        }
-    };
-
-    const onChangeMode = (event) => {
-        setSettings({
-            ...settings,
-            themeMode: event.target.value,
-        });
+      
     };
 
     const onResetSetting = () => {
@@ -47,9 +40,8 @@ export const SettingsProvider = ({ children }) => {
     return (
         <SettingsContext.Provider
             value={{
-                ...settings,
+                theme,
                 onToggleMode,
-                onChangeMode,
                 onResetSetting,
             }}>
             {children}

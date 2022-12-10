@@ -8,7 +8,8 @@ import styles from './SideBar.module.css';
 
 const SideBar = () => {
     const [active, setActive] = useState(0);
-    const { onToggleMode } = useSettingsContext();
+    const { onToggleMode, theme } = useSettingsContext();
+    const themeMode = theme === 'light' ? false : true;
     return (
         <section className={styles.sideBar}>
             <div className={styles.logo}>
@@ -34,7 +35,7 @@ const SideBar = () => {
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <label className={styles.switch}>
-                            <input type='checkbox' defaultChecked onChange={onToggleMode} />
+                            <input type='checkbox' defaultChecked={theme === 'dark' ? false : true} onChange={onToggleMode} />
                             <span className={styles.slider}></span>
                         </label>
                     </li>
