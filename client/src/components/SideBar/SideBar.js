@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSettingsContext } from '../../context/SettingsContext';
 
 import { Nav_Buttons } from './assets/data';
 import logo from './assets/images/logo.png';
@@ -7,7 +8,7 @@ import styles from './SideBar.module.css';
 
 const SideBar = () => {
     const [active, setActive] = useState(0);
-
+    const { onToggleMode } = useSettingsContext();
     return (
         <section className={styles.sideBar}>
             <div className={styles.logo}>
@@ -33,7 +34,7 @@ const SideBar = () => {
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <label className={styles.switch}>
-                            <input type='checkbox' defaultChecked />
+                            <input type='checkbox' defaultChecked onChange={onToggleMode} />
                             <span className={styles.slider}></span>
                         </label>
                     </li>
