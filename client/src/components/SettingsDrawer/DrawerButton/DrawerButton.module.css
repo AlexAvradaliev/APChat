@@ -1,0 +1,25 @@
+.wrapper {
+    backdrop-filter: blur(6px);
+    background-color: var(--clr-settings);
+    right: 0;
+    top: 50%;
+    position: fixed;
+    margin-top: -24px;
+    padding: 4px;
+    z-index: 1202;
+    border-radius: 50%;
+    box-shadow: -12px 12px 32px -4px rgb(99 115 129 / 36%);
+    cursor: pointer;
+}
+
+.button__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--clr-text);
+    padding: 10px;
+    border-radius: 50%;
+}
