@@ -1,15 +1,15 @@
 import { useRef } from 'react';
 import { IoMdRefresh, IoMdClose } from 'react-icons/io';
-import { CgAlignLeft, CgAlignRight } from 'react-icons/cg';
 
 import styles from './DrawerMenu.module.css';
 import useOutsideClick from '../../../hooks/useOutsideClick';
 import { useSettingsContext } from '../../../context/SettingsContext';
 import DrawerPreset from './DrawerPreset/DrawerPreset';
 import Fullscreen from './Fullscreen/Fullscreen';
+import DrawerDirection from './DrawerDirection/DrawerDirection';
 
 const DrawerMenu = ({ open, dismiss }) => {
-    const { onResetSetting } = useSettingsContext();
+    const { onResetSetting, themeDirection } = useSettingsContext();
     const ref = useRef();
 
     useOutsideClick(ref, dismiss);
@@ -19,7 +19,7 @@ const DrawerMenu = ({ open, dismiss }) => {
     }
 
     return (
-        <section ref={ref} className={styles.wrapper}>
+        <section ref={ref} className={`${styles.wrapper} ${themeDirection === 'ltr' ? styles.ltr :styles.rtl}`}>
             <div className={styles.header}>
                 <h5 className={styles.header__text}>Settings</h5>
                 <div>
@@ -34,19 +34,9 @@ const DrawerMenu = ({ open, dismiss }) => {
 
             <div className={styles.divider}></div>
 
-            <div className={styles.direction}>
-                <p className={styles.text}>Direction</p>
-                <div>
-                    <button className={`${styles.direction__button} ${styles.active}`}>
-                        <CgAlignLeft />
-                    </button>
-                    <button className={styles.direction__button}>
-                        <CgAlignRight />
-                    </button>
-                </div>
-            </div>
+            <DrawerDirection />
             <DrawerPreset />
-           <Fullscreen />
+            <Fullscreen />
         </section>
     );
 };

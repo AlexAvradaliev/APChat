@@ -3,6 +3,13 @@
     padding: 0 24px;
 }
 
+.text {
+    color: var(--clr-text);
+    font-weight: var(--font-semibold);
+    line-height: 1.57;
+    font-size: var(--small-font-size);
+}
+
 .presets__grid {
     margin-top: 12px;
     display: grid;
@@ -26,6 +33,10 @@
     background-color: var(--clr-bg-active);
     border: solid 2px var(--clr-primary);
     box-shadow: var(--active-shadow);
+}
+
+.presets__button.active span {
+    transform: rotate(0deg);
 }
 
 .presets__button > span {

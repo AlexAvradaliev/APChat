@@ -8,6 +8,7 @@ export const SettingsContext = createContext();
 const initialState = {
     themeMode: 'light',
     themeColor: 'blue',
+    themeDirection: 'ltr',
 };
 
 export const SettingsProvider = ({ children }) => {
@@ -26,6 +27,10 @@ export const SettingsProvider = ({ children }) => {
         attribute('data-color', settings.themeColor);
     }, [settings.themeColor]);
 
+    useEffect(() => {
+        attribute('data-direction', settings.themeDirection);
+    }, [settings.themeDirection]);
+
     const onToggleMode = () => {
         setSettings({
             ...settings,
@@ -40,6 +45,13 @@ export const SettingsProvider = ({ children }) => {
         });
     };
 
+    const onChangeDirection = (direction) => {
+        setSettings({
+          ...settings,
+          themeDirection: direction,
+        });
+      };
+
     const onResetSetting = () => {
         setSettings(initialState);
     };
@@ -50,6 +62,7 @@ export const SettingsProvider = ({ children }) => {
                 ...settings,
                 onToggleMode,
                 onChangeColor,
+                onChangeDirection,
                 onResetSetting,
             }}>
             {children}

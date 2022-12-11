@@ -16,7 +16,7 @@
     --clr-bg-active: rgba(1, 98, 196, 0.08);
     --clr-menu: rgba(255, 255, 255, 0.92);
 
-    /*========== Colors ==========*/
+    /*========== Shadows ==========*/
     --shadow-primary: 0px 0px 2px rgb(0 0 0 / 25%);
     --active-shadow: inset 0 4px 8px 0 rgb(1 98 196 / 24%);
 
@@ -30,6 +30,8 @@
     /*========== Font weight ==========*/
     --font-medium: 600;
     --font-semibold: 700;
+    /*============= Flex =============*/
+    --direction: row;
 }
 
 /*========== Body theme ==========*/
@@ -85,4 +87,8 @@
     --clr-badge: rgb(33, 43, 54);
     --clr-settings: rgba(22, 28, 36, 0.64);
     --clr-menu: rgba(33, 43, 54, 0.92);
+}
+
+[data-direction='rtl'] {
+    --direction: row-reverse;
 }

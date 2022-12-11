@@ -1,7 +1,6 @@
 .wrapper {
     backdrop-filter: blur(6px);
     background-color: var(--clr-settings);
-    right: 0;
     top: 50%;
     position: fixed;
     margin-top: -24px;
@@ -10,6 +9,14 @@
     border-radius: 50%;
     box-shadow: -12px 12px 32px -4px rgb(99 115 129 / 36%);
     cursor: pointer;
+}
+
+.ltr {
+    right: 0;
+}
+
+.rtl {
+    left: 0;
 }
 
 .button__icon {
