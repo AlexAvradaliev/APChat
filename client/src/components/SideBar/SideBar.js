@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSettingsContext } from '../../context/SettingsContext';
+import Avatar from '../common/Avatar/Avatar';
 
 import { Nav_Buttons } from './assets/data';
 import logo from './assets/images/logo.png';
@@ -40,13 +41,9 @@ const SideBar = () => {
                         </label>
                     </li>
                     <li className={styles.item}>
-                        <img
-                            src={
-                                'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-                            }
-                            alt='logo'
-                            className={styles.avatar}
-                        />
+                    <Avatar src={
+                        'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+} alt={'name'} />
                     </li>
                 </ul>
             </nav>
