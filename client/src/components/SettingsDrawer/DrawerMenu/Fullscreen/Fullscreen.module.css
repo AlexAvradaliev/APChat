@@ -1,0 +1,28 @@
+.full {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-width: 64px;
+    padding: 7px 21px;
+    border-radius: 8px;
+    border: 1px solid rgba(145, 158, 171, 0.32);
+    height: 48px;
+    font-size: 1rem;
+    background-color: transparent;
+    margin: 24px;
+    color: var(--clr-text);
+}
+
+.full.active {
+    color: var(--clr-primary);
+    background-color: var(--clr-bg-active);
+    border: 1px solid var(--clr-primary);
+}
+
+.full__text {
+    font-family: 'Manrope', 'Public Sans', sans-serif;
+    font-size: var(--small-font-size);
+    font-weight: 700;
+    line-height: 1.71;
+}

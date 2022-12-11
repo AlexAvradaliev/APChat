@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import { IoMdRefresh, IoMdClose } from 'react-icons/io';
 import { CgAlignLeft, CgAlignRight } from 'react-icons/cg';
-import { RiFullscreenFill } from 'react-icons/ri';
 
 import styles from './DrawerMenu.module.css';
 import useOutsideClick from '../../../hooks/useOutsideClick';
 import { useSettingsContext } from '../../../context/SettingsContext';
 import DrawerPreset from './DrawerPreset/DrawerPreset';
+import Fullscreen from './Fullscreen/Fullscreen';
 
 const DrawerMenu = ({ open, dismiss }) => {
     const { onResetSetting } = useSettingsContext();
@@ -46,10 +46,7 @@ const DrawerMenu = ({ open, dismiss }) => {
                 </div>
             </div>
             <DrawerPreset />
-            <button className={`${styles.full} ${styles.active}`}>
-                <RiFullscreenFill />
-                <p className={styles.full__text}>Fullscreen</p>
-            </button>
+           <Fullscreen />
         </section>
     );
 };
