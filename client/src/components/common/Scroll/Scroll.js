@@ -1,6 +1,6 @@
 import SimpleBarReact from 'simplebar-react';
 import 'simplebar/src/simplebar.css';
-import './scroll.css';
+import './Scroll.css';
 
 const Scroll = ({ children, ...other }) => {
     return (

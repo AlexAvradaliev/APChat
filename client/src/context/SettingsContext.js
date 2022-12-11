@@ -1,47 +1,55 @@
 import { createContext, useContext, useEffect } from 'react';
 
 import useLocalStorage from '../hooks/useLocalStorage';
+import attribute from '../utils/attribute';
 
-const defaultSettings = {
-    themeMode: 'light',
-};
+export const SettingsContext = createContext();
 
 const initialState = {
-    ...defaultSettings,
+    themeMode: 'light',
+    themeColor: 'blue',
 };
 
-export const SettingsContext = createContext(initialState);
-
 export const SettingsProvider = ({ children }) => {
-    const [settings, setSettings] = useLocalStorage('settings', {
-        themeMode: initialState.themeMode,
-    });
-
-    const theme = settings.themeMode;
+    const [settings, setSettings] = useLocalStorage('settings', initialState);
+    useEffect(() => {
+        if (!localStorage.getItem('settings')) {
+            localStorage.setItem('settings', JSON.stringify(initialState));
+        }
+    }, []);
 
     useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-    },[theme])
+        attribute('data-theme', settings.themeMode);
+    }, [settings.themeMode]);
+
+    useEffect(() => {
+        attribute('data-color', settings.themeColor);
+    }, [settings.themeColor]);
 
     const onToggleMode = () => {
         setSettings({
             ...settings,
             themeMode: settings.themeMode === 'light' ? 'dark' : 'light',
         });
-      
+    };
+
+    const onChangeColor = (color) => {
+        setSettings({
+            ...settings,
+            themeColor: color,
+        });
     };
 
     const onResetSetting = () => {
-        setSettings({
-            themeMode: initialState.themeMode,
-        });
+        setSettings(initialState);
     };
 
     return (
         <SettingsContext.Provider
             value={{
-                theme,
+                ...settings,
                 onToggleMode,
+                onChangeColor,
                 onResetSetting,
             }}>
             {children}

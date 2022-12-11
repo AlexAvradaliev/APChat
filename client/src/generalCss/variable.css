@@ -25,6 +25,7 @@
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.75rem;
+    --tint-font-size: 0.65rem;
 
     /*========== Font weight ==========*/
     --font-medium: 600;
@@ -32,42 +33,42 @@
 }
 
 /*========== Body theme ==========*/
-body.blue {
+[data-color='blue'] {
     --clr-primary: rgb(1, 98, 196);
     --clr-checkTheme: rgb(1, 98, 196);
     --clr-bg-active: rgba(1, 98, 196, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(1, 98, 196, 0.24);
 }
 
-body.violet {
+[data-color='violet'] {
     --clr-primary: rgb(118, 53, 220);
     --clr-checkTheme: rgb(118, 53, 220);
     --clr-bg-active: rgba(118, 53, 220, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(118, 53, 220, 0.24);
 }
 
-body.skyBlue {
+[data-color='skyBlue'] {
     --clr-primary: rgb(28, 202, 255);
     --clr-checkTheme: rgb(28, 202, 255);
     --clr-bg-active: rgba(28, 202, 255, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(28, 202, 255, 0.24);
 }
 
-body.green {
+[data-color='green'] {
     --clr-primary: rgb(0, 255, 0);
     --clr-checkTheme: rgb(0, 255, 0);
     --clr-bg-active: rgba(0, 255, 0, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(0, 255, 0, 0.24);
 }
 
-body.orange {
+[data-color='orange'] {
     --clr-primary: rgb(253, 169, 45);
     --clr-checkTheme: rgb(253, 169, 45);
     --clr-bg-active: rgba(253, 169, 45, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(253, 169, 45, 0.24);
 }
 
-body.red {
+[data-color='red'] {
     --clr-primary: rgb(255, 48, 48);
     --clr-checkTheme: rgb(255, 48, 48);
     --clr-bg-active: rgba(255, 48, 48, 0.08);

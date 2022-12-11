@@ -9,8 +9,8 @@ import styles from './SideBar.module.css';
 
 const SideBar = () => {
     const [active, setActive] = useState(0);
-    const { onToggleMode, theme } = useSettingsContext();
-    const themeMode = theme === 'light' ? false : true;
+    const { onToggleMode, themeMode } = useSettingsContext();
+
     return (
         <section className={styles.sideBar}>
             <div className={styles.logo}>
@@ -36,14 +36,17 @@ const SideBar = () => {
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <label className={styles.switch}>
-                            <input type='checkbox' defaultChecked={theme === 'dark' ? false : true} onChange={onToggleMode} />
+                            <input type='checkbox' checked={themeMode === 'dark' ? false : true} onChange={onToggleMode} />
                             <span className={styles.slider}></span>
                         </label>
                     </li>
                     <li className={styles.item}>
-                    <Avatar src={
-                        'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
-} alt={'name'} />
+                        <Avatar
+                            src={
+                                'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
+                            }
+                            alt={'name'}
+                        />
                     </li>
                 </ul>
             </nav>
