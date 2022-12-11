@@ -1,20 +1,24 @@
 :root {
     /*========== Colors ==========*/
-    --clr-bg-primary: #f0f4fa;
-    --clr-bg-secondary: #f8faff;
-    --clr-primary: #0162c4;
-    --clr-white: #fff;
-    --clr-divider: #dae0e7;
-    --clr-divider-text: #dae0e7;
-    --clr-text: #080707;
+    --clr-bg-primary: rgb(240, 244, 250);
+    --clr-bg-secondary: rgb(248, 250, 255);
+    --clr-primary: rgb(1, 98, 196);
+    --clr-white: rgb(255, 255, 255);
+    --clr-divider: rgb(218, 224, 231);
+    --clr-divider-text: rgb(218, 224, 231);
+    --clr-text: rgb(8, 7, 7);
     --clr-bg-hover: rgba(99, 115, 129, 0.08);
-    --clr-icons: #637381;
-    --clr-checkTheme: #0162c4;
-    --clr-badge: #fff;
-    --clr-scroll: #808793;
+    --clr-icons: rgb(99, 115, 129);
+    --clr-checkTheme: rgb(0, 98, 196);
+    --clr-badge: rgb(255, 255, 255);
+    --clr-scroll: rgb(128, 135, 147);
+    --clr-settings: rgba(248, 250, 255, 0.64);
+    --clr-bg-active: rgba(1, 98, 196, 0.08);
+    --clr-menu: rgba(255, 255, 255, 0.92);
 
     /*========== Colors ==========*/
     --shadow-primary: 0px 0px 2px rgb(0 0 0 / 25%);
+    --active-shadow: inset 0 4px 8px 0 rgb(1 98 196 / 24%);
 
     /*==========Typography ==========*/
     --biggest-font-size: 1.25rem;
@@ -29,41 +33,55 @@
 
 /*========== Body theme ==========*/
 body.blue {
-    --clr-primary: #0162c4;
-    --clr-checkTheme: #0162c4;
+    --clr-primary: rgb(1, 98, 196);
+    --clr-checkTheme: rgb(1, 98, 196);
+    --clr-bg-active: rgba(1, 98, 196, 0.08);
+    --active-shadow: inset 0 4px 8px 0 rgba(1, 98, 196, 0.24);
 }
 
 body.violet {
-    --clr-primary: #7635dc;
-    --clr-checkTheme: #7635dc;
+    --clr-primary: rgb(118, 53, 220);
+    --clr-checkTheme: rgb(118, 53, 220);
+    --clr-bg-active: rgba(118, 53, 220, 0.08);
+    --active-shadow: inset 0 4px 8px 0 rgba(118, 53, 220, 0.24);
 }
 
 body.skyBlue {
-    --clr-primary: #1ccaff;
-    --clr-checkTheme: #1ccaff;
+    --clr-primary: rgb(28, 202, 255);
+    --clr-checkTheme: rgb(28, 202, 255);
+    --clr-bg-active: rgba(28, 202, 255, 0.08);
+    --active-shadow: inset 0 4px 8px 0 rgba(28, 202, 255, 0.24);
 }
 
 body.green {
-    --clr-primary: #00ff00;
-    --clr-checkTheme: #00ff00;
+    --clr-primary: rgb(0, 255, 0);
+    --clr-checkTheme: rgb(0, 255, 0);
+    --clr-bg-active: rgba(0, 255, 0, 0.08);
+    --active-shadow: inset 0 4px 8px 0 rgba(0, 255, 0, 0.24);
 }
 
 body.orange {
-    --clr-primary: #fda92d;
-    --clr-checkTheme: #fda92d;
+    --clr-primary: rgb(253, 169, 45);
+    --clr-checkTheme: rgb(253, 169, 45);
+    --clr-bg-active: rgba(253, 169, 45, 0.08);
+    --active-shadow: inset 0 4px 8px 0 rgba(253, 169, 45, 0.24);
 }
 
-body.orange {
-    --clr-primary: #ff3030;
-    --clr-checkTheme: #ff3030;
+body.red {
+    --clr-primary: rgb(255, 48, 48);
+    --clr-checkTheme: rgb(255, 48, 48);
+    --clr-bg-active: rgba(255, 48, 48, 0.08);
+    --active-shadow: inset 0 4px 8px 0 rgba(255, 48, 48, 0.24);
 }
 
 [data-theme='dark'] {
-    --clr-bg-primary: #212b36;
-    --clr-bg-secondary: #161c24;
-    --clr-text: #fff;
-    --clr-icons: #fff;
+    --clr-bg-primary: rgb(33, 43, 54);
+    --clr-bg-secondary: rgb(22, 28, 36);
+    --clr-text: rgb(255, 255, 255);
+    --clr-icons: rgb(255, 255, 255);
     --clr-divider: rgba(145, 158, 171, 0.24);
-    --clr-divider-text: #fff;
-    --clr-badge: #212b36;
+    --clr-divider-text: rgb(255, 255, 255);
+    --clr-badge: rgb(33, 43, 54);
+    --clr-settings: rgba(22, 28, 36, 0.64);
+    --clr-menu: rgba(33, 43, 54, 0.92);
 }
