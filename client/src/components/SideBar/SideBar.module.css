@@ -89,7 +89,7 @@
 }
 
 input:checked + .slider {
-    background-color: var(--clr-checkTheme);
+    background-color: var(--clr-primary);
 }
 
 input:checked + .slider::before {

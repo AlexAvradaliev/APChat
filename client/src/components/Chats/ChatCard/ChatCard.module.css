@@ -1,0 +1,71 @@
+.card {
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--clr-badge);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card.active {
+    background-color: var(--clr-checkTheme);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.content__name {
+    color: var(--clr-text);
+    font-weight: var(--font-semibold);
+    line-height: 1.57;
+    font-size: var(--smaller-font-size);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.content__msg {
+    color: var(--clr-text);
+    line-height: 1.5;
+    font-size: var(--tint-font-size);
+    font-weight: var(--font-medium);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    padding: 0 6px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.badge__content,
+.right__time {
+    display: block;
+    font-weight: var(--font-medium);
+    font-size: var(--tint-font-size);
+}
+
+.right__time {
+    color: var(--clr-text);
+}

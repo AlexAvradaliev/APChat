@@ -1,5 +1,7 @@
+import Chats from "../../components/Chats/Chats"
+
 const GeneralApp = () => {
-    return <p>dash</p>;
+    return <Chats />;
 };
 
 export default GeneralApp;
