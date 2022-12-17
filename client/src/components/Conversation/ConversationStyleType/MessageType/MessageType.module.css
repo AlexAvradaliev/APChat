@@ -1,0 +1,24 @@
+.text {
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+    padding: 6px 16px;
+    height: 2.5rem;
+    width: max-content;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.in {
+    background-color: var(--clr-white);
+    color: var(--clr-text);
+}
+
+.out {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+[data-theme='dark'] .in {
+    background-color: var(--clr-bg-secondary);
+}
