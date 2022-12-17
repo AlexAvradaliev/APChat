@@ -4,7 +4,7 @@ const Avatar = ({src, alt, online, px}) => {
     const sizeImage = {width: `${px}px`, height: `${px}px`}
     const sizeBadge = {width: `${px/5}px`, height: `${px/5}px`}
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} style={sizeImage}>
             <img
              className={styles.avatar}
              src={src}
