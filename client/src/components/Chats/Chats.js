@@ -34,8 +34,8 @@ const Chats = () => {
                     </button>
                 </div>
                 <div className={styles.divider}></div>
-                <div className={`${styles.chat__wrapper} scroll`}>
-                    <Scroll />
+                <div className={`${styles.chat__wrapper} chat`}>
+                    <Scroll selector='chat' />
                     <p className={styles.text}>Pinned</p>
                     {ChatList.filter((el) => el.pinned).map((el, idx) => {
                         return <ChatCard key={el.id} {...el} onSelect={onSelect} select={select} />;

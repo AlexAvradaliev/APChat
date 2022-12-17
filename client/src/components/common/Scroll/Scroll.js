@@ -19,15 +19,15 @@ const options = {
     },
 };
 
-const Scroll = () => {
+const Scroll = ({selector}) => {
     useEffect(() => {
         Scrollbar.use(OverscrollPlugin);
-        Scrollbar.init(document.querySelector('.scroll'), options);
+        Scrollbar.init(document.querySelector(`.${selector}`), options);
 
         return () => {
-            if (Scrollbar) Scrollbar.destroy(document.querySelector('.scroll'));
+            if (Scrollbar) Scrollbar.destroy(document.querySelector(`.${selector}`));
         };
-    }, []);
+    }, [selector]);
 
     return null;
 };
