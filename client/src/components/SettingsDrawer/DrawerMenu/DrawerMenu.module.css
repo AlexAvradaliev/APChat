@@ -12,7 +12,7 @@
     padding-bottom: 24px;
     z-index: 1203;
     border-radius: 12px;
-    box-shadow: -24px 12px 32px -4px rgb(145 158 171 / 16%);
+    box-shadow: var(--shadow-secondary);
 }
 
 .ltr {

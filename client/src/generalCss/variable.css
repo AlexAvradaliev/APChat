@@ -18,7 +18,9 @@
 
     /*========== Shadows ==========*/
     --shadow-primary: 0px 0px 2px rgb(0 0 0 / 25%);
+    --shadow-secondary:0 20px 40px -4px rgb(145 158 171 / 16%);
     --active-shadow: inset 0 4px 8px 0 rgb(1 98 196 / 24%);
+    --shadow-button:-12px 12px 32px -4px rgb(99 115 129 / 36%);
 
     /*==========Typography ==========*/
     --biggest-font-size: 1.25rem;
@@ -87,6 +89,8 @@
     --clr-badge: rgb(33, 43, 54);
     --clr-settings: rgba(22, 28, 36, 0.64);
     --clr-menu: rgba(33, 43, 54, 0.92);
+    --shadow-secondary: 0 20px 40px -4px rgb(0 0 0 / 16%);
+    --shadow-button:0 20px 40px -4px rgb(0 0 0 / 16%);
 }
 
 [data-direction='rtl'] {

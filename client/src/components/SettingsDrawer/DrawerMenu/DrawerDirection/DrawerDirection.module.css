@@ -27,7 +27,7 @@
     color: #919eab;
     border: solid 1px rgba(145, 158, 171, 0.12);
     border-radius: 10px;
-    box-shadow: 0 20px 40px -4px rgb(145 158 171 / 16%);
+    box-shadow: var(--shadow-secondary);
     font-size: 2.5rem;
 }
 

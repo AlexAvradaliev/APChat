@@ -1,5 +1,5 @@
 import { BiVideo, BiPhone, BiSearch } from 'react-icons/bi';
-import {AiOutlineDown} from 'react-icons/ai'
+import { AiOutlineDown } from 'react-icons/ai';
 
 import Avatar from '../../common/Avatar/Avatar';
 
@@ -35,7 +35,7 @@ const ConversationHeader = () => {
                     </button>
                 </li>
                 <li className={styles.divider}></li>
-                <li className={styles.item} >
+                <li className={styles.item}>
                     <button className={`${styles.item__btn} ${styles.down}`}>
                         <AiOutlineDown />
                     </button>

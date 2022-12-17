@@ -8,11 +8,17 @@ const ConversationFooter = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.input}>
-                <button className={styles.input__btn}><AiOutlineLink /></button>
-                <input className={styles.input__input} />
-                <button className={styles.input__btn}> <HiOutlineFaceSmile /></button>
-            </div> 
-                <button className={styles.send}><RiSendPlaneFill /></button>
+                <button className={styles.input__btn}>
+                    <AiOutlineLink />
+                </button>
+                <input className={styles.input__input} placeholder="Write a message..." />
+                <button className={styles.input__btn}>
+                    <HiOutlineFaceSmile />
+                </button>
+            </div>
+            <button className={styles.send}>
+                <RiSendPlaneFill />
+            </button>
         </div>
     );
 };
