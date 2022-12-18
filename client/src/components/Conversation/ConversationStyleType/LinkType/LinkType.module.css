@@ -1,0 +1,56 @@
+.link {
+    cursor: pointer;
+}
+
+.wrapper {
+    padding: 12px;
+    border-radius: 12px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.image {
+    max-height: 210px;
+    border-radius: 10px;
+    padding: 16px 16px 0 16px;
+}
+.name {
+    margin-top: 24px;
+    font-weight: 700;
+    line-height: 1.5714285714285714;
+    font-size: 0.875rem;
+    padding: 0 16px;
+
+}
+
+.url {
+    margin-top: 16px;
+    font-weight: 700;
+    line-height: 1.5714285714285714;
+    font-size: 0.875rem;
+    padding: 0 16px 16px 16px;
+}
+
+.text {
+    margin-top: 16px;
+    line-height: 1.5714285714285714;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.in {
+    background-color: var(--clr-white);
+    color: var(--clr-text);
+}
+
+.out {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+[data-theme='dark'] .in {
+    background-color: var(--clr-bg-secondary);
+}
