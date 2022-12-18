@@ -1,0 +1,34 @@
+.wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 12px;
+    width: max-content;
+}
+
+.image {
+    max-height: 210px;
+    border-radius: 10px;
+}
+
+.text {
+    margin-top: 8px;
+    color: inherit;
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+}
+
+.in {
+    background-color: var(--clr-white);
+    color: var(--clr-text);
+}
+
+.out {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+[data-theme='dark'] .in {
+    background-color: var(--clr-bg-secondary);
+}
