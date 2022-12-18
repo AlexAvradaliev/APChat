@@ -1,0 +1,55 @@
+.wrapper {
+    position: relative;
+    padding: 12px;
+    border-radius: 12px;
+    width: max-content;
+    max-width: 210px;
+    overflow: hidden;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 2.5rem;
+    margin-top: 24px;
+}
+
+.icon__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    color: inherit;
+    font-size: 1.5rem;
+    padding: 8px;
+}
+
+.name {
+    margin-top: 8px;
+    color: inherit;
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+}
+
+.text {
+    margin-top: 24px;
+    color: inherit;
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+}
+
+.in {
+    background-color: var(--clr-white);
+    color: var(--clr-text);
+}
+
+.out {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+[data-theme='dark'] .in {
+    background-color: var(--clr-bg-secondary);
+}
