@@ -1,0 +1,14 @@
+.divider{
+    width: 46%;
+    height: 1px;
+    background-color: var(--clr-divider);
+    align-self: center
+}
+
+.date {
+    padding: 0 12px;
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+    color: var(--clr-divider-text);
+    align-self: center
+}
