@@ -8,7 +8,7 @@ const LinkType = ({ preview, message, incoming }) => {
                 <h5 className={styles.name}>Creating Chat App using MERN</h5>
                 <p className={styles.url}>youtube.com</p>
             </a>
-            <p className={styles.text}>message</p>
+            <p className={styles.text}>{message}</p>
         </article>
     );
 };
