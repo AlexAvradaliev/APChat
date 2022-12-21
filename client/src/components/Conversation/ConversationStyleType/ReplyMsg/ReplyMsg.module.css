@@ -49,7 +49,3 @@ margin-top: 16px;
 [data-theme= 'dark'] .out .message {
     color: rgb(8, 7, 7);
 }
-/* 
-[data-theme= 'dark'] .in .message {
-    color: #fff;
-} */

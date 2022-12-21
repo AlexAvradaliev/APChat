@@ -1,5 +1,4 @@
 .container {
     height: 100vh;
     width: calc(100vw - 100px - 320px);
-    background-color: aqua;
 }

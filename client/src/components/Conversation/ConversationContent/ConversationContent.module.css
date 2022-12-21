@@ -1,0 +1,38 @@
+.container {
+    background-color: var(--clr-bg-primary);
+    width: 100%;
+    height: calc(100% - 128px);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: auto;
+}
+
+.container > div {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 14px;
+}
+
+.wrapper__left {
+    justify-content: flex-start;
+}
+
+.wrapper__right {
+    justify-content: flex-end;
+}
+
+.rf {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lf {
+    width: 50%;
+}
