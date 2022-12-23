@@ -54,3 +54,19 @@ input {
 ::-webkit-scrollbar {
     display: none;
 }
+
+
+/* ========================Emoticons========================== */
+
+em-emoji-picker {
+    --font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    --font-size: 10px;
+    --category-icon-size: 16px;
+    --border-radius: 10px;
+
+    font-size: var(--font-size);
+    height: 280px;
+    min-height: 280px;
+    max-height: 800px;
+    width: 279px;
+  }

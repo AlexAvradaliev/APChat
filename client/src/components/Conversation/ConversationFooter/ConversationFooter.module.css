@@ -7,6 +7,13 @@
     display: inline-flex;
     gap: 1rem;
 }
+
+.emoji__container {
+    position: absolute;
+    bottom: 66px;
+    right: 60px;
+}
+
 [data-theme='dark'] .footer {
     background-color: var(--clr-bg-primary);
 }
@@ -20,7 +27,8 @@
     background-color: rgb(236, 239, 245);
 }
 
-.input__btn {
+.input__btn,
+.emoji__btn {
     color: var(--clr-icons);
     font-size: 1.6rem;
     background-color: transparent;
