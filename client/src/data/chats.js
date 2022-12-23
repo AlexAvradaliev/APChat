@@ -54,7 +54,7 @@ export const Chat_History = [
     type: "msg",
     subtype: "link",
     preview: 'https://plus.unsplash.com/premium_photo-1668116307088-583ee0d4aaf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
-    message: "Yep, I can also do that",
+    message: "Yep, I can also do that :)",
     incoming: true,
     outgoing: false,
   },
