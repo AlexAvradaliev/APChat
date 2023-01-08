@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { TbCircleDashed } from 'react-icons/tb';
 import { BiArchiveIn } from 'react-icons/bi';
 import { CiSearch } from 'react-icons/ci';
@@ -7,7 +8,6 @@ import ChatCard from './ChatCard/ChatCard';
 
 import { ChatList } from '../../data';
 import Scroll from '../common/Scroll/Scroll';
-import { useState } from 'react';
 
 const Chats = () => {
 
@@ -16,6 +16,7 @@ const Chats = () => {
     const onSelect = (id) => {
         setSelect(id);
     };
+    
     return (
         <section className={styles.section}>
             <div className={styles.container}>

@@ -63,7 +63,7 @@ export const Chat_History = [
     subtype: "reply",
     reply: "This is a reply",
     message: "Yep, I can also do that",
-    incoming: true,
-    outgoing: false,
+    incoming: false,
+    outgoing: true,
   },
 ];

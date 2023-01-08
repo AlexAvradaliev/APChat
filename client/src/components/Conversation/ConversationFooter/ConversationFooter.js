@@ -1,22 +1,26 @@
 import { useRef, useState } from 'react';
-import data from '@emoji-mart/data/sets/14/facebook.json';
-import Picker from '@emoji-mart/react';
+
+import EmojiPicker from 'emoji-picker-react';
 import { AiOutlineLink } from 'react-icons/ai';
 import { HiOutlineFaceSmile } from 'react-icons/hi2';
 import { RiSendPlaneFill } from 'react-icons/ri';
 
+import SubMenu from '../../common/SubMenu/SubMenu';
 import { useSettingsContext } from '../../../context/SettingsContext';
 import useOutsideClick from '../../../hooks/useOutsideClick';
 
+import { iconsMenu } from '../../../data/menus';
 import styles from './ConversationFooter.module.css';
 
 const ConversationFooter = () => {
     const ref = useRef();
+    const refMenu = useRef();
 
     const { themeMode } = useSettingsContext();
 
     const [value, setValue] = useState('');
     const [open, setOpen] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
     const valueHandler = (e) => {
         setValue(e.value);
@@ -26,14 +30,23 @@ const ConversationFooter = () => {
         setOpen(option);
     };
 
+    const openMenuHandler = (option) => {
+        setOpenMenu(option);
+    };
+
     useOutsideClick(ref, () => openHandler(false));
+    useOutsideClick(refMenu, () => openMenuHandler(false));
 
     return (
         <div className={styles.footer}>
             <div className={styles.input}>
-                <button className={styles.input__btn}>
-                    <AiOutlineLink />
-                </button>
+                <div ref={refMenu} className={styles.menu__wrapper}>
+                    <button className={styles.input__btn} onClick={() => openMenuHandler(openMenu ? false : true)}>
+                        <AiOutlineLink />
+                    </button>
+                    {openMenu && <SubMenu bottom='45px' left='430px' options={iconsMenu} variant='2' />}
+                </div>
+
                 <input
                     className={styles.input__input}
                     placeholder='Write a message...'
@@ -43,15 +56,15 @@ const ConversationFooter = () => {
                 <div ref={ref} className={styles.emoji}>
                     {open && (
                         <div className={styles.emoji__container}>
-                            <Picker
-                                data={data}
-                                set='facebook'
-                                perLine='7'
-                                previewPosition='none'
-                                dynamicWidth='true'
+                            <EmojiPicker
+                                skinTonesDisabled='true'
+                                lazyLoadEmojis='true'
                                 theme={themeMode === 'dark' ? 'dark' : 'light'}
-                                emojiSize={20}
-                                emojiButtonSize={28}
+                                onEmojiClick={console.log}
+                                emojiStyle='google'
+                                width={300}
+                                height={300}
+                                previewConfig={{ showPreview: false }}
                             />
                         </div>
                     )}
@@ -60,6 +73,7 @@ const ConversationFooter = () => {
                     </button>
                 </div>
             </div>
+
             <button className={styles.send}>
                 <RiSendPlaneFill />
             </button>

@@ -15,6 +15,13 @@
     --clr-settings: rgba(248, 250, 255, 0.64);
     --clr-bg-active: rgba(1, 98, 196, 0.08);
     --clr-menu: rgba(255, 255, 255, 0.92);
+       
+    /* =========== Menu v2 ======== */
+    --menu-nt1: rgb(1, 64, 127);
+    --menu-nt2: rgb(1, 89, 178);
+    --menu-nt3: rgb(1, 115, 228);
+    --menu-nt4: rgb(27, 140, 254);
+    --menu-nt5: rgb(77, 166, 254);
 
     /*========== Shadows ==========*/
     --shadow-primary: 0px 0px 2px rgb(0 0 0 / 25%);
@@ -42,6 +49,12 @@
     --clr-checkTheme: rgba(1, 98, 196, 0.5);
     --clr-bg-active: rgba(1, 98, 196, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(1, 98, 196, 0.24);
+
+    --menu-nt1: rgb(1, 64, 127);
+    --menu-nt2: rgb(1, 89, 178);
+    --menu-nt3: rgb(1, 115, 228);
+    --menu-nt4: rgb(27, 140, 254);
+    --menu-nt5: rgb(77, 166, 254);
 }
 
 [data-color='violet'] {
@@ -49,13 +62,25 @@
     --clr-checkTheme: rgba(118, 53, 220, 0.5);
     --clr-bg-active: rgba(118, 53, 220, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(118, 53, 220, 0.24);
+
+    --menu-nt1: hsl(263, 70%, 45%);
+    --menu-nt2: hsl(263, 70%, 52%);
+    --menu-nt3: #8249df;
+    --menu-nt4: rgb(142, 90, 226);
+    --menu-nt5: rgb(166, 125, 232);
 }
 
 [data-color='skyBlue'] {
-    --clr-primary: rgb(28, 202, 255);
+    --clr-primary: rgb(26, 201, 255);
     --clr-checkTheme: rgba(28, 202, 255, 0.5);
     --clr-bg-active: rgba(28, 202, 255, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(28, 202, 255, 0.24);
+
+    --menu-nt1: hsl(194, 99%, 25%);
+    --menu-nt2: hsl(194, 99%, 35%);
+    --menu-nt3: hsl(194, 99%, 45%);
+    --menu-nt4: hsl(194, 99%, 55%);
+    --menu-nt5: hsl(194, 99%, 65%);
 }
 
 [data-color='green'] {
@@ -63,20 +88,38 @@
     --clr-checkTheme: rgba(20, 255, 247, 0.5);
     --clr-bg-active: rgba(20, 255, 247, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(20, 255, 247, 0.24);
+
+    --menu-nt1: hsl(178, 99%, 25%);
+    --menu-nt2: hsl(178, 99%, 35%);
+    --menu-nt3: hsl(178, 99%, 45%);
+    --menu-nt4: hsl(178, 99%, 55%);
+    --menu-nt5: hsl(178, 99%, 65%);
 }
 
 [data-color='orange'] {
-    --clr-primary: rgb(253, 169, 45);
+    --clr-primary: hsl(36, 98%, 58%);
     --clr-checkTheme: rgba(253, 169, 45, 0.5);
     --clr-bg-active: rgba(253, 169, 45, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(253, 169, 45, 0.24);
+
+    --menu-nt1: hsl(36, 99%, 25%);
+    --menu-nt2: hsl(36, 99%, 35%);
+    --menu-nt3: hsl(36, 99%, 45%);
+    --menu-nt4: hsl(36, 99%, 55%);
+    --menu-nt5: hsl(36, 99%, 65%);
 }
 
 [data-color='red'] {
-    --clr-primary: rgb(255, 48, 48);
+    --clr-primary: hsl(0, 100%, 59%);
     --clr-checkTheme: rgba(255, 48, 48, 0.5);
     --clr-bg-active: rgba(255, 48, 48, 0.08);
     --active-shadow: inset 0 4px 8px 0 rgba(255, 48, 48, 0.24);
+
+    --menu-nt1: hsl(0, 99%, 25%);
+    --menu-nt2: hsl(0, 99%, 35%);
+    --menu-nt3: hsl(0, 99%, 45%);
+    --menu-nt4: hsl(0, 99%, 55%);
+    --menu-nt5: hsl(0, 99%, 65%);
 }
 
 [data-theme='dark'] {
@@ -95,4 +138,13 @@
 
 [data-direction='rtl'] {
     --direction: row-reverse;
+}
+
+:root .EmojiPickerReact {
+    --epr-emoji-size: 25px ;
+
+}
+
+:root .EmojiPickerReact .epr-emoji-category-label {
+    font-size: var(--small-font-size);
 }
